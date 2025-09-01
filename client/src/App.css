@@ -1,0 +1,250 @@
+/* App Container */
+.app {
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 20px 0;
+}
+
+.chat-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.chat-card {
+  height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: none;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.chat-header {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: white;
+  border-bottom: none;
+  padding: 20px;
+}
+
+.bot-avatar {
+  position: relative;
+  margin-right: 15px;
+}
+
+.robot-logo {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.online-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #4cd137;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.bot-info h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.bot-info small {
+  color: white !important;
+  opacity: 0.8;
+}
+
+/* Messages Container */
+.messages-container {
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  flex: 1;
+}
+
+.welcome-message {
+  text-align: center;
+  color: #6c757d;
+  margin: 20px 0;
+}
+
+.welcome-message h6 {
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+/* Message Styles */
+.message {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.user-message .message-content {
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  color: white;
+  margin-right: 10px;
+}
+
+.bot-message .message-content {
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+
+.message-text {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.message-time {
+  font-size: 11px;
+  opacity: 0.7;
+  text-align: right;
+}
+
+.user-avatar img {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e9ecef;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #6c757d;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Footer Styles */
+.chat-footer {
+  background: white;
+  border-top: 1px solid #e9ecef;
+  padding: 20px;
+}
+
+.input-group {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-input {
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.message-input:focus {
+  box-shadow: none;
+  border-color: #000000;
+}
+
+.send-button {
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.send-button:hover {
+  background: linear-gradient(135deg, #333333 0%, #555555 100%);
+  transform: translateY(-1px);
+}
+
+.send-button:disabled {
+  background: #6c757d;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-card {
+    height: 95vh;
+    margin: 0 10px;
+  }
+  
+  .message-content {
+    max-width: 85%;
+  }
+  
+  .app {
+    padding: 10px 0;
+  }
+}
+
+/* Scrollbar Styling */
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
