@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Intellichat - React + Express AI Chatbot
 
 A modern AI-powered chatbot built with React frontend and Express backend, using Google's Gemini API.
@@ -154,3 +155,6 @@ This project is open source and available under the [ISC License](LICENSE).
 ## 🤝 Contributing
 
 Feel free to submit issues and enhancement requests!
+=======
+# ChatBot---Coral
+>>>>>>> 9c733397ee2e6f10ed068435f1fd3d37fbea5c96
