@@ -150,12 +150,3 @@ npm run client
 3. **CORS errors**
    - Ensure the backend is running on port 5000
    - Check that the proxy is set correctly in client/package.json
-
-## 📄 License
-
-This project is open source and available under the [ISC License](LICENSE).
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
-=======
